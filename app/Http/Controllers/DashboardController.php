@@ -21,7 +21,6 @@ use Illuminate\Support\Facades\DB;
 
 class DashboardController extends Controller
 {
-
     public function login(Request $request)
     {
         $request->validate([
@@ -260,7 +259,8 @@ class DashboardController extends Controller
         return response()->json(null, 204);
     }
 
-    public function indexRareMedicine() {
+    public function indexRareMedicine()
+    {
         $requests = RareMedicineRequest::all();
         return response()->json($requests);
     }
@@ -277,19 +277,22 @@ class DashboardController extends Controller
     }
 
 
-    public function indexFeedback() {
+    public function indexFeedback()
+    {
         $feedbacks = Feedback::all();
         return response()->json($feedbacks);
     }
 
     // Existing methods for regular feedback management are assumed to be correct
 
-    public function getPinnedFeedbacks() {
+    public function getPinnedFeedbacks()
+    {
         $feedbacks = Feedback::where('is_pinned', true)->get();
         return response()->json($feedbacks);
     }
 
-    public function approveFeedback($id) {
+    public function approveFeedback($id)
+    {
         $feedback = Feedback::find($id);
         if ($feedback) {
             $feedback->is_pinned = false;
@@ -299,7 +302,8 @@ class DashboardController extends Controller
         return response()->json(['message' => 'Feedback not found'], 404);
     }
 
-    public function ignoreFeedback($id) {
+    public function ignoreFeedback($id)
+    {
         $feedback = Feedback::find($id);
         if ($feedback) {
             $feedback->delete();
@@ -311,7 +315,8 @@ class DashboardController extends Controller
 
 
     // Delete a feedback
-    public function destroyFeedback($id) {
+    public function destroyFeedback($id)
+    {
         try {
             $feedback = Feedback::findOrFail($id);
             $feedback->delete();
@@ -322,13 +327,15 @@ class DashboardController extends Controller
     }
 
 
-    public function indexContact() {
+    public function indexContact()
+    {
         $contacts = Contact::all();
         return response()->json($contacts);
     }
 
     // Delete a contact
-    public function destroyContact($id) {
+    public function destroyContact($id)
+    {
         try {
             $contact = Contact::findOrFail($id);
             $contact->delete();
@@ -420,9 +427,9 @@ class DashboardController extends Controller
             DB::raw('DATE(created_at) as date'),
             DB::raw('count(*) as count')
         )
-        ->groupBy('date')
-        ->orderBy('date', 'ASC')
-        ->get();
+            ->groupBy('date')
+            ->orderBy('date', 'ASC')
+            ->get();
 
         return response()->json($registrations);
     }
@@ -448,6 +455,4 @@ class DashboardController extends Controller
 
         return response()->json($salesRevenue);
     }
-
 }
-

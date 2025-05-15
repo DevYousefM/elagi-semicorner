@@ -1,0 +1,118 @@
+///////////////////////////0
+  GET|HEAD  api/cart ........................... AuthController@getCart
+  GET|HEAD  api/cart/quantity .......... AuthController@getCartQuantity
+  POST      api/cart/add ..................... AuthController@addToCart
+  PATCH     api/cart/{cartItem} ......... AuthController@updateQuantity
+  DELETE    api/cart/clear ................... AuthController@clearCart
+  DELETE    api/cart/{cartItem} ............. AuthController@removeItem
+///////////////////////////1
+
+///////////////////////////0
+  POST      api/contact/save ..................... AuthController@store
+  GET|HEAD  api/contacts ............. DashboardController@indexContact
+  DELETE    api/contacts/{id} ...... DashboardController@destroyContact
+///////////////////////////1
+
+
+///////////////////////////0
+  GET|HEAD  api/dashboard/chart-data . DashboardController@getChartData
+  GET|HEAD  api/dashboard/medicines DashboardController@countMedicines
+  GET|HEAD  api/dashboard/most-sold-medicines DashboardController@getM…
+  GET|HEAD  api/dashboard/orders ...... DashboardController@countOrders
+  GET|HEAD  api/dashboard/sales-revenue DashboardController@getSalesRe…
+  GET|HEAD  api/dashboard/total-sales-revenue DashboardController@getT…
+  GET|HEAD  api/dashboard/user-registrations DashboardController@getUs…
+  GET|HEAD  api/dashboard/users ........ DashboardController@countUsers
+///////////////////////////1
+
+///////////////////////////0
+  POST      api/donate ................ AuthController@initiateDonation
+///////////////////////////1
+
+///////////////////////////0
+  GET|HEAD  api/dorders ............... DashboardController@indexOrders
+  GET|HEAD  api/dorders/{id} ..... DashboardController@showOrderDetails
+  PUT       api/dorders/{order} ...... DashboardController@updateOrders
+  DELETE    api/dorders/{order} ..... DashboardController@destroyOrders
+///////////////////////////1
+
+///////////////////////////0
+  GET|HEAD  api/favorites ................ AuthController@listFavorites
+  POST      api/favorites/add/{productId} .......... AuthController@add
+  DELETE    api/favorites/clear ............... AuthController@clearAll
+  DELETE    api/favorites/remove/{id} AuthController@removeFromFavorit…
+///////////////////////////1
+
+///////////////////////////0
+  POST      api/feedback ................. AuthController@storeFeedback
+  POST      api/approveFeedback/{id} DashboardController@approveFeedba…
+  GET|HEAD  api/feedback ......................... AuthController@index
+  GET|HEAD  api/feedbacks ........... DashboardController@indexFeedback
+  GET|HEAD  api/pinnedFeedbacks DashboardController@getPinnedFeedbacks
+  DELETE    api/feedbacks/{id} .... DashboardController@destroyFeedback
+  DELETE    api/ignoreFeedback/{id} DashboardController@ignoreFeedback
+///////////////////////////1
+
+///////////////////////////0
+  GET|HEAD  api/medicines ...................... AuthController@product
+  GET|HEAD  api/medicines/category/{categorySlug} AuthController@getBy…
+  GET|HEAD  api/medicines/{product} ............... AuthController@show
+  GET|HEAD  api/rare-medicine-requests DashboardController@indexRareMe…
+  DELETE    api/rare-medicine-requests/{id} DashboardController@destro…
+///////////////////////////1
+
+///////////////////////////0
+  GET|HEAD  api/notifications ... DashboardController@indexNotification
+  PATCH     api/notifications/mark-all-read DashboardController@markAl…
+  PATCH     api/notifications/mark-all-unread DashboardController@mark…
+  GET|HEAD  api/notifications/{id} DashboardController@showNotification
+  DELETE    api/notifications/{id} DashboardController@deleteNotificat…
+  PATCH     api/notifications/{id}/read DashboardController@markAsRead
+  PATCH     api/notifications/{id}/unread DashboardController@markAsUn…
+///////////////////////////1
+
+///////////////////////////0
+  PUT       api/order-items/{id} .. DashboardController@updateOrderItem
+  GET|HEAD  api/orders ....................... AuthController@getOrders
+  POST      api/payment/callback ........ AuthController@handleCallback
+  GET|HEAD  api/check-payment-status/{paymentId} AuthController@checkP…
+  POST      api/checkout ...................... AuthController@checkout
+  POST      api/create-payment-intent AuthController@createPaymentInte…
+///////////////////////////1
+
+///////////////////////////0
+  GET|HEAD  api/products ............ DashboardController@indexProducts
+  POST      api/products ............ DashboardController@storeProducts
+  PUT       api/products/{id} ...... DashboardController@updateProducts
+  GET|HEAD  api/products/{product} ... DashboardController@showProducts
+  DELETE    api/products/{product} DashboardController@destroyProducts
+///////////////////////////1
+
+
+/////////////////////////////////////0
+  POST      api/register ...................... AuthController@register
+  POST      api/resend-otp ................... AuthController@resendOtp
+  POST      api/reset-password ........... AuthController@resetPassword
+  POST      api/forgot-password ......... AuthController@forgotPassword
+  POST      api/login ............................ AuthController@login
+  POST      api/logout ..................... DashboardController@logout
+  POST      api/verify-otp ................... AuthController@verifyOtp
+  GET|HEAD  api/user ..................................................
+  PUT       api/user ............................ AuthController@update
+  POST      api/user/update ..................... AuthController@update
+  POST      api/validate-token ...... DashboardController@validateToken
+  POST      api/dashlogin ................... DashboardController@login
+/////////////////////////////////////1
+
+/////////////////////////////////////0
+  POST      api/store-rare-medicine .. AuthController@storeRareMedicine
+  POST      api/upload-medicalTest ... AuthController@uploadMedicalTest
+  POST      api/upload-prescription . AuthController@uploadPrescription
+/////////////////////////////////////1
+
+
+/////////////////////////////////////0
+  GET|HEAD  api/users ....................... DashboardController@index
+  PUT       api/users/{user} ............... DashboardController@update
+  DELETE    api/users/{user} .............. DashboardController@destroy
+/////////////////////////////////////1

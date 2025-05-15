@@ -52,7 +52,6 @@ Route::delete('/favorites/remove/{id}', [AuthController::class, 'removeFromFavor
 Route::delete('/favorites/clear', [AuthController::class, 'clearAll'])->middleware('auth:sanctum');
 Route::post('/create-payment-intent', [AuthController::class, 'createPaymentIntent']);
 
-
 Route::middleware('auth:sanctum')->group(function () {
     Route::post('/cart/add', [AuthController::class, 'addToCart']);
     Route::delete('/cart/clear', [AuthController::class, 'clearCart']);
