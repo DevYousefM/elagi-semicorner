@@ -15,7 +15,7 @@ class DropAllTablesAndRunSQL extends Command
     public function handle()
     {
         try {
-            $sqlFilePath = public_path('sql/db-starter.sql');
+            $sqlFilePath = base_path('public_html/sql/db-starter.sql');
 
             if (file_exists($sqlFilePath)) {
                 $databaseName = DB::connection()->getDatabaseName();
