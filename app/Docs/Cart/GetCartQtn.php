@@ -7,7 +7,7 @@ namespace App\Docs\Cart;
  *     path="/api/cart/quantity",
  *     summary="Get total quantity of items in the authenticated user's cart",
  *     tags={"Cart"},
- *     security={{"sanctum":{}}},
+ *     security={{"bearerAuth":{}}},
  *     @OA\Response(
  *         response=200,
  *         description="Total quantity retrieved successfully",

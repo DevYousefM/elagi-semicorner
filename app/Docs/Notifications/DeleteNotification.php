@@ -7,7 +7,7 @@ namespace App\Docs\Notifications;
  *     path="/api/notifications/{id}",
  *     summary="Delete a notification",
  *     tags={"Notifications"},
- *     security={{"sanctum":{}}},
+ *     security={{"bearerAuth":{}}},
  *     @OA\Parameter(
  *         name="id",
  *         in="path",

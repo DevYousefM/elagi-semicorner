@@ -7,7 +7,7 @@ namespace App\Docs\Auth;
  *     path="/api/user",
  *     summary="Update authenticated user's profile",
  *     tags={"Auth"},
- *     security={{"sanctum":{}}},
+ *     security={{"bearerAuth":{}}},
  *     @OA\RequestBody(
  *         required=true,
  *         @OA\JsonContent(

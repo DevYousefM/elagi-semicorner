@@ -6,6 +6,7 @@ namespace App\Docs\Feedback;
  *     path="/api/feedback",
  *     summary="Get all unpinned feedback",
  *     tags={"Feedback"},
+ *     security={{"bearerAuth":{}}},
  *     @OA\Response(
  *         response=200,
  *         description="List of unpinned feedback",

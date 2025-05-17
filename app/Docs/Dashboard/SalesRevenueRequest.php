@@ -6,6 +6,7 @@ namespace App\Docs\Dashboard;
  *     path="/api/dashboard/sales-revenue",
  *     summary="Get sales revenue by date",
  *     tags={"Dashboard"},
+ *     security={{"bearerAuth":{}}},
  *     @OA\Response(response=200, description="Success")
  * )
  */

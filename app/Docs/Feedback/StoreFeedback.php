@@ -6,6 +6,7 @@ namespace App\Docs\Feedback;
  *     path="/api/feedback",
  *     summary="Submit feedback",
  *     tags={"Feedback"},
+ *     security={{"bearerAuth":{}}},
  *     @OA\RequestBody(
  *         required=true,
  *         @OA\JsonContent(

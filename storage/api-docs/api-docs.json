@@ -504,7 +504,7 @@
                 },
                 "security": [
                     {
-                        "sanctum": []
+                        "bearerAuth": []
                     }
                 ]
             },
@@ -1457,6 +1457,38 @@
                         "description": "Success"
                     }
                 }
+            }
+        },
+        "/api/reset-db": {
+            "get": {
+                "tags": [
+                    "Dashboard"
+                ],
+                "summary": "Reset DB",
+                "operationId": "2b3c7b7a53688ebf5755982c525bc74e",
+                "responses": {
+                    "200": {
+                        "description": "Reset DB",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "message": {
+                                            "type": "string",
+                                            "example": "Database reset successfully."
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
             }
         },
         "/api/dashboard/sales-revenue": {
@@ -4151,6 +4183,14 @@
                     }
                 ]
             }
+        },
+        "securitySchemes": {
+            "bearerAuth": {
+                "type": "http",
+                "description": "Enter your bearer token in the format: Bearer {token}",
+                "scheme": "bearer",
+                "bearerFormat": "JWT"
+            }
         }
     },
     "tags": [
@@ -4209,6 +4249,11 @@
         {
             "name": "Users",
             "description": "Users"
+        }
+    ],
+    "security": [
+        {
+            "bearerAuth": []
         }
     ]
 }

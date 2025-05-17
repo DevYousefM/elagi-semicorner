@@ -7,7 +7,7 @@ namespace App\Docs\Cart;
  *     path="/api/cart",
  *     summary="Get authenticated user's cart items",
  *     tags={"Cart"},
- *     security={{"sanctum":{}}},
+ *     security={{"bearerAuth":{}}},
  *     @OA\Response(
  *         response=200,
  *         description="List of cart items",

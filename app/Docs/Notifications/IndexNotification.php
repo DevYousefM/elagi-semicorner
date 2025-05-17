@@ -7,7 +7,7 @@ namespace App\Docs\Notifications;
  *     path="/api/notifications",
  *     summary="Get all notifications",
  *     tags={"Notifications"},
- *     security={{"sanctum":{}}},
+ *     security={{"bearerAuth":{}}},
  *     @OA\Response(
  *         response=200,
  *         description="List of notifications",

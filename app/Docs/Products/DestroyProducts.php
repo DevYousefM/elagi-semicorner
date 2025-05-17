@@ -7,6 +7,7 @@ namespace App\Docs\Products;
  *     path="/api/products/{product}",
  *     summary="Delete a product",
  *     tags={"Products"},
+ *     security={{"bearerAuth":{}}},
  *     @OA\Parameter(
  *         name="product",
  *         in="path",

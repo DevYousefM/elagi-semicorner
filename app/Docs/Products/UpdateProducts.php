@@ -8,6 +8,7 @@ use OpenApi\Annotations as OA;
  *     path="/api/products/{id}",
  *     summary="Update an existing product",
  *     tags={"Products"},
+ *     security={{"bearerAuth":{}}},
  *     @OA\Parameter(
  *         name="id",
  *         in="path",

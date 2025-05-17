@@ -2,21 +2,23 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\User;
-use App\Models\Medicine;
-use App\Models\Product;
-use App\Models\Order;
-use App\Models\OrderItem;
-use App\Models\RareMedicineRequest;
-use App\Models\Feedback;
 use App\Models\Contact;
 use App\Models\DashboardNotification;
-use Illuminate\Http\Response;
+use App\Models\Feedback;
+use App\Models\Medicine;
+use App\Models\Order;
+use App\Models\OrderItem;
+use App\Models\Product;
+use App\Models\RareMedicineRequest;
+use App\Models\User;
+use Exception;
 use Illuminate\Http\Request;
+use Illuminate\Http\Response;
+use Illuminate\Support\Facades\Artisan;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Validation\Rule;
-use Illuminate\Support\Facades\Hash;
-use Illuminate\Support\Facades\DB;
 
 
 class DashboardController extends Controller
@@ -454,5 +456,11 @@ class DashboardController extends Controller
             ->get();
 
         return response()->json($salesRevenue);
+    }
+
+    public function resetDB()
+    {
+        Artisan::call("db:drop-and-run");
+        return response()->json(['message' => 'DB reset successfully!']);
     }
 }

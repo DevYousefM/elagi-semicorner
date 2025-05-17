@@ -6,6 +6,7 @@ namespace App\Docs\Feedback;
  *     path="/api/ignoreFeedback/{id}",
  *     summary="Ignore and delete a feedback",
  *     tags={"Feedback"},
+ *     security={{"bearerAuth":{}}},
  *     @OA\Parameter(
  *         name="id",
  *         in="path",

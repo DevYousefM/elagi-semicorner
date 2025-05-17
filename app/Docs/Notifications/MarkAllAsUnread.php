@@ -7,7 +7,7 @@ namespace App\Docs\Notifications;
  *     path="/api/notifications/mark-all-unread",
  *     summary="Mark all notifications as unread",
  *     tags={"Notifications"},
- *     security={{"sanctum":{}}},
+ *     security={{"bearerAuth":{}}},
  *     @OA\Response(
  *         response=200,
  *         description="All notifications marked as unread",

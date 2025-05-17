@@ -7,6 +7,7 @@ namespace App\Docs\Orders;
  *     path="/api/dorders/{order}",
  *     summary="Update an order",
  *     tags={"Orders"},
+ *     security={{"bearerAuth":{}}},
  *     @OA\Parameter(
  *         name="order",
  *         in="path",

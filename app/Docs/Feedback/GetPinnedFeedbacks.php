@@ -6,6 +6,7 @@ namespace App\Docs\Feedback;
  *     path="/api/pinnedFeedbacks",
  *     summary="Get pinned feedback",
  *     tags={"Feedback"},
+ *     security={{"bearerAuth":{}}},
  *     @OA\Response(
  *         response=200,
  *         description="List of pinned feedback",

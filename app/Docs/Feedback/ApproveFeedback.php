@@ -6,6 +6,7 @@ namespace App\Docs\Feedback;
  *     path="/api/approveFeedback/{id}",
  *     summary="Approve (unpin) a feedback",
  *     tags={"Feedback"},
+ *     security={{"bearerAuth":{}}},
  *     @OA\Parameter(
  *         name="id",
  *         in="path",

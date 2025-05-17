@@ -7,7 +7,7 @@ namespace App\Docs\Auth;
  *     path="/api/logout",
  *     summary="Logout the authenticated user",
  *     tags={"Auth"},
- *     security={{"sanctum": {}}},
+ *     security={{"bearerAuth":{}}},
  *     @OA\Response(
  *         response=200,
  *         description="Logout successful",

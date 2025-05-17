@@ -7,6 +7,7 @@ namespace App\Docs\Payment;
  *     path="/api/payment/callback",
  *     summary="Handle payment gateway callback",
  *     tags={"Payments"},
+ *     security={{"bearerAuth":{}}},
  *     @OA\RequestBody(
  *         required=true,
  *         description="Payment gateway callback data",

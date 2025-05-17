@@ -7,6 +7,7 @@ namespace App\Docs\Products;
  *     path="/api/products",
  *     summary="Create a new product",
  *     tags={"Products"},
+ *     security={{"bearerAuth":{}}},
  *     @OA\RequestBody(
  *         required=true,
  *         @OA\JsonContent(

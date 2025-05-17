@@ -6,6 +6,7 @@ namespace App\Docs\Dashboard;
  *     path="/api/dashboard/user-registrations",
  *     summary="Get user registrations over time",
  *     tags={"Dashboard"},
+ *     security={{"bearerAuth":{}}},
  *     @OA\Response(response=200, description="Success")
  * )
  */

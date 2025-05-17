@@ -7,6 +7,7 @@ namespace App\Docs\RareMedicine;
  * path="/api/rare-medicine-requests/{id}",
  * summary="Delete a rare medicine request by ID",
  * tags={"Rare Medicine Requests"},
+ * security={{"bearerAuth":{}}},
  * @OA\Parameter(
  * name="id",
  * in="path",

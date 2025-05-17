@@ -7,7 +7,7 @@ namespace App\Docs\Cart;
  *     path="/api/cart/add",
  *     summary="Add a product to the authenticated user's cart",
  *     tags={"Cart"},
- *     security={{"sanctum":{}}},
+ *     security={{"bearerAuth":{}}},
  *     @OA\RequestBody(
  *         required=true,
  *         @OA\JsonContent(

@@ -9,8 +9,13 @@ class AddOrderIdToNotificationsTable extends Migration
     public function up()
     {
         Schema::table('notifications', function (Blueprint $table) {
-            $table->unsignedBigInteger('order_id')->after('id');
-            $table->foreign('order_id')->references('id')->on('orders')->onDelete('cascade');
+            if (!Schema::hasColumn('notifications', 'order_id')) {
+                $table->unsignedBigInteger('order_id')->after('id');
+                $table->foreign('order_id')
+                    ->references('id')
+                    ->on('orders')
+                    ->onDelete('cascade');
+            }
         });
     }
 
@@ -22,4 +27,3 @@ class AddOrderIdToNotificationsTable extends Migration
         });
     }
 }
-

@@ -7,7 +7,7 @@ namespace App\Docs\Cart;
  *     path="/api/cart/{cartItem}",
  *     summary="Update quantity of a specific cart item",
  *     tags={"Cart"},
- *     security={{"sanctum":{}}},
+ *     security={{"bearerAuth":{}}},
  *     @OA\Parameter(
  *         name="cartItem",
  *         in="path",

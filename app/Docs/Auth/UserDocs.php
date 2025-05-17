@@ -7,7 +7,7 @@ namespace App\Docs\Auth;
  *     path="/api/user",
  *     summary="Get authenticated user data",
  *     tags={"Auth"},
- *     security={{"sanctum":{}}},
+ *     security={{"bearerAuth":{}}},
  *     @OA\Response(
  *         response=200,
  *         description="Authenticated user data",

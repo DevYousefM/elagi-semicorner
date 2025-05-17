@@ -6,6 +6,7 @@ namespace App\Docs\Feedback;
  *     path="/api/feedbacks/{id}",
  *     summary="Delete a feedback",
  *     tags={"Feedback"},
+ *     security={{"bearerAuth":{}}},
  *     @OA\Parameter(
  *         name="id",
  *         in="path",

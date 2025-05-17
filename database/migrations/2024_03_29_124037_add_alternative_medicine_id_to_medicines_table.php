@@ -12,9 +12,13 @@ return new class extends Migration
     public function up()
     {
         Schema::table('medicines', function (Blueprint $table) {
-            // Add the 'alternative_medicine_id' column and set it as a foreign key
-            $table->unsignedBigInteger('alternative_medicine_id')->nullable()->after('stock');
-            $table->foreign('alternative_medicine_id')->references('id')->on('medicines')->onDelete('set null');
+            if (!Schema::hasColumn('medicines', 'alternative_medicine_id')) {
+                $table->unsignedBigInteger('alternative_medicine_id')->nullable()->after('stock');
+                $table->foreign('alternative_medicine_id')
+                    ->references('id')
+                    ->on('medicines')
+                    ->onDelete('set null');
+            }
         });
     }
 
@@ -27,4 +31,3 @@ return new class extends Migration
         });
     }
 };
-

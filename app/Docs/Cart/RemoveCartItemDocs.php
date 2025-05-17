@@ -7,7 +7,7 @@ namespace App\Docs\Cart;
  *     path="/api/cart/{cartItem}",
  *     summary="Remove a specific cart item",
  *     tags={"Cart"},
- *     security={{"sanctum":{}}},
+ *     security={{"bearerAuth":{}}},
  *     @OA\Parameter(
  *         name="cartItem",
  *         in="path",

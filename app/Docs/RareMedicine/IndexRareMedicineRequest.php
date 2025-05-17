@@ -7,6 +7,7 @@ namespace App\Docs\RareMedicine;
  *     path="/api/rare-medicine-requests",
  *     summary="Get all rare medicine requests",
  *     tags={"Rare Medicine Requests"},
+ *     security={{"bearerAuth":{}}},
  *     @OA\Response(
  *         response=200,
  *         description="List of rare medicine requests",

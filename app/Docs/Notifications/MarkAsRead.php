@@ -7,7 +7,7 @@ namespace App\Docs\Notifications;
  *     path="/api/notifications/{id}/read",
  *     summary="Mark notification as read",
  *     tags={"Notifications"},
- *     security={{"sanctum":{}}},
+ *     security={{"bearerAuth":{}}},
  *     @OA\Parameter(
  *         name="id",
  *         in="path",
